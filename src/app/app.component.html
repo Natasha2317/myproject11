@@ -1,0 +1,115 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-s-12" *ngFor="let det of dets">
+      <div class="card" [ngClass] = "{'color-card': det.status}">
+        <div class="card-body">
+          <h5 class="card-title">{{det.id}}</h5>
+          <p class="card-text">{{det.name}}</p>
+          <p class="card-text">{{det.status}}</p>
+        </div>
+      </div>
+      <button (click) = "onDeleteCard(det.id)" type="submit" class="btn btn-success">Удалить</button>
+    </div>
+</div>
+<br>
+<form (submit)="addCard(inputCard.value)">
+  <div class="form-group">
+    <label for="card">Добавление карточки</label>
+    <input type="text" id="card" class="form-control" placeholder="Введите название карточки" #inputCard><br>
+    <button type="submit" class="btn btn-success">Добавить</button>
+  </div>
+</form>
+</div>
+
+
+      <!--<div class="card" [ngClass] = "{'color-card': dets[1].status}">
+        <div class="card-body">
+          <h5 class="card-title">{{dets[1].id}}</h5>
+          <p class="card-text">{{dets[1].name}}</p>
+          <p class="card-text">{{dets[1].status}}</p>
+        </div>-->
+
+<!--<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>{{ title }}</h1>
+      <h1>{{ hello() }}</h1>
+      <h1>Флаг {{ flag === true ? "включен" : "выключен" }}</h1>
+      <h1>{{ title.toUpperCase() }}</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <button class = "btn btn-primary" [disabled] = "!buttonEnabled">
+        Кнопка
+      </button>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="myblock" (mousemove) = "getCoords($event)"></div>
+      <p>X: {{ blockX }} Y: {{ blockY }}</p>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+        <input type = "text" class = "form-control" [(ngModel)] = "inputValue" />
+      </div>
+      <p>{{ inputValue }}</p>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="form-group">
+        <input type = "text" class = "form-control" #someInput />
+      </div>
+       <button class = "btn btn-primary" (click) = "getData(someInput)">
+        Кнопка
+      </button>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p *ngIf = "flag === true">Флаг включен</p>
+      <p *ngIf = "flag === false">Флаг включен</p>
+      <ng-container *ngIf = "flag === true; else elseTemplate">
+        <p>Флаг включен</p>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <p>Флаг включен</p>
+      </ng-template>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-3" *ngFor = "let item of someArray">{{ item }}</div>
+  </div>
+</div>
+<hr />
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-12">
+      <p [style.font-size] = "fontSize + 'px'">Какой-то текст</p>
+      <p [ngStyle] = "{'font-size' : fontSize + 'px'}">Еще какой-то текст</p>
+  </div>
+  </div>
+</div>-->
